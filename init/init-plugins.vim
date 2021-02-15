@@ -3,7 +3,8 @@
 " init-plugins.vim - 
 "
 " Created by skywind on 2018/05/31
-" Last Modified: 2018/06/10 23:11
+" Forked and updated by charles0801 on 2021/2/15
+" Last Modified: 2021/2/15 23:11
 "
 "======================================================================
 " vim: set ts=4 sw=4 tw=78 noet :
@@ -17,8 +18,9 @@ if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
 	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
 	let g:bundle_group += ['leaderf']
+	let g:bundle_group += ['leetcode']
+	let g:bundle_group += ['youcompleteme']
 endif
-
 
 "----------------------------------------------------------------------
 " 计算当前 vim-init 的子路径
@@ -334,6 +336,12 @@ if index(g:bundle_group, 'grammer') >= 0
 	map <space>rp <Plug>(grammarous-move-to-previous-error)
 endif
 
+"----------------------------------------------------------------------
+" Leetcode
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'leetcode') >= 0
+	Plug 'ianding1/leetcode.vim'
+endif
 
 "----------------------------------------------------------------------
 " ale：动态语法检查
@@ -516,8 +524,14 @@ if index(g:bundle_group, 'leaderf') >= 0
 		noremap <m-n> :CtrlPBuffer<cr>
 	endif
 endif
-
-
+"----------------------------------------------------------------------
+"YouCompleteMe 安装
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'youcompleteme') >= 0
+	if has('python') || has('python3')
+		Plug 'Valloric/YouCompleteMe'
+	endif
+endif
 "----------------------------------------------------------------------
 " 结束插件安装
 "----------------------------------------------------------------------
