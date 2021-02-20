@@ -288,4 +288,9 @@ set guitablabel=%{Vim_NeatGuiTabLabel()}
 set guitabtooltip=%{Vim_NeatGuiTabTip()}
 
 
-
+"-----------------------------------------------------------------------
+"字体设置
+"-----------------------------------------------------------------------
+if has("gui_running")
+	set guifont=Consolas:h14
+endif

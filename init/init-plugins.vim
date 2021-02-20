@@ -20,6 +20,7 @@ if !exists('g:bundle_group')
 	let g:bundle_group += ['leaderf']
 	let g:bundle_group += ['leetcode']
 	let g:bundle_group += ['youcompleteme']
+	let g:bundle_group += ['AsyncRun']
 endif
 
 "----------------------------------------------------------------------
@@ -55,6 +56,8 @@ Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
 " Diff 增强，支持 histogram / patience 等更科学的 diff 算法
 Plug 'chrisbra/vim-diff-enhanced'
 
+" NERD commenter 快速注释
+Plug 'preservim/nerdcommenter'
 
 "----------------------------------------------------------------------
 " Dirvish 设置：自动排序并隐藏文件，同时定位到相关文件
@@ -192,6 +195,9 @@ if index(g:bundle_group, 'tags') >= 0
 	" 支持光标移动到符号名上：<leader>cg 查看定义，<leader>cs 查看引用
 	Plug 'skywind3000/gutentags_plus'
 
+	" 环境变量
+	let $GTAGSLABEL = 'native-pygments'
+	let $GTAGSCONF 
 	" 设定项目目录标志：除了 .git/.svn 外，还有 .root 文件
 	let g:gutentags_project_root = ['.root']
 	let g:gutentags_ctags_tagfile = '.tags'
@@ -532,6 +538,13 @@ if index(g:bundle_group, 'youcompleteme') >= 0
 		Plug 'Valloric/YouCompleteMe'
 	endif
 endif
+"----------------------------------------------------------------------
+"AsyncRun
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'AsyncRun') >= 0
+	Plug 'skywind3000/asyncrun.vim'
+endif
+
 "----------------------------------------------------------------------
 " 结束插件安装
 "----------------------------------------------------------------------
