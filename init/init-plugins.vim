@@ -347,6 +347,9 @@ endif
 "----------------------------------------------------------------------
 if index(g:bundle_group, 'leetcode') >= 0
 	Plug 'ianding1/leetcode.vim'
+	
+	" 设定leetcode_browser
+	let g:leetcode_browser = "chrome"
 endif
 
 "----------------------------------------------------------------------
