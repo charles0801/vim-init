@@ -196,8 +196,8 @@ if index(g:bundle_group, 'tags') >= 0
 	Plug 'skywind3000/gutentags_plus'
 
 	" 环境变量
-	let $GTAGSLABEL = 'native-pygments'
-	let $GTAGSCONF 
+"	let $GTAGSLABEL = 'native-pygments'
+"	let $GTAGSCONF 
 	" 设定项目目录标志：除了 .git/.svn 外，还有 .root 文件
 	let g:gutentags_project_root = ['.root']
 	let g:gutentags_ctags_tagfile = '.tags'
