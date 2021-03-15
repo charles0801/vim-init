@@ -294,3 +294,6 @@ set guitabtooltip=%{Vim_NeatGuiTabTip()}
 if has("gui_running")
 	set guifont=Consolas:h14
 endif
+
+" tab 设置
+set expandtab

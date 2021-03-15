@@ -20,7 +20,8 @@ if !exists('g:bundle_group')
 	let g:bundle_group += ['leaderf']
 	let g:bundle_group += ['leetcode']
 	let g:bundle_group += ['youcompleteme']
-	let g:bundle_group += ['AsyncRun']
+	" let g:bundle_group += ['AsyncRun']
+    let g:bundle_group += ['vimspector']
 endif
 
 "----------------------------------------------------------------------
@@ -548,6 +549,14 @@ if index(g:bundle_group, 'AsyncRun') >= 0
 	Plug 'skywind3000/asyncrun.vim'
 endif
 
+
+"----------------------------------------------------------------------
+" Debugger vimspector
+"----------------------------------------------------------------------
+if index(g:bundle_group, 'vimspector') >= 0
+    Plug 'puremourning/vimspector'
+    let g:vimspector_enable_mappings = 'HUMAN'
+endif
 "----------------------------------------------------------------------
 " 结束插件安装
 "----------------------------------------------------------------------
@@ -585,7 +594,10 @@ let g:ycm_semantic_triggers =  {
 "----------------------------------------------------------------------
 let g:ycm_filetype_whitelist = { 
 			\ "c":1,
-			\ "cpp":1, 
+            \ "cc":1,
+			\ "cpp":1,
+            \ "h":1,
+            \ "hpp":1,
 			\ "objc":1,
 			\ "objcpp":1,
 			\ "python":1,
